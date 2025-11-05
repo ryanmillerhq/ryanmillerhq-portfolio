@@ -2,7 +2,7 @@ import json
 import logging
 import datetime
 import boto3
-import gspread  # Assuming gspread for Google Sheets integration
+import gspread
 
 logger = logging.getLogger()
 logger.setLevel(logging.INFO)

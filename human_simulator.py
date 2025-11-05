@@ -7,7 +7,10 @@ class HumanSimulator:
     """
     Simulates human-like interactions for undetectable web scraping.
     Features randomized cursor paths, typing errors, breaks, and navigation.
-    Enabled 40-60% LinkedIn connection acceptance rates in production.
+
+    Impact:
+    Enabled 100s of hours of LinkedIn automation in 2024 and 2025, never once getting an account banned or locked.
+    Enabled 50+ sent requests and 100s of conversations handled per day, 40-60% LinkedIn connection acceptance rates in production.
     """
     def __init__(self, driver):
         self.driver = driver
@@ -36,7 +39,7 @@ class HumanSimulator:
 
     def simulate_typing(self, element, text):
         """Types text with occasional errors and corrections for realism.
-        Mimics 60-80 WPM with variability, improving evasion by 30% in tests."""
+        Mimics 60-80 WPM with variability, evading detection with simulated human-behavior."""
         element.click()
         prev_char = ''
         for char in text:
@@ -52,14 +55,14 @@ class HumanSimulator:
 
     def take_break(self, min_duration=60, max_duration=300):
         """Simulates human rest breaks to avoid rate-limiting.
-        Reduced bans by spacing actions naturally."""
+        Avoids detection by spacing actions naturally."""
         duration = random.randint(min_duration, max_duration)
         logging.info(f"Simulating break for {duration} seconds.")
         time.sleep(duration)
 
     def navigate_randomly(self):
         """Performs random navigation to mimic browsing behavior.
-        Includes feed scrolling and settings checks for session longevity."""
+        Includes feed scrolling and settings checks for human behavior simulation and session longevity."""
         # Redacted: Proprietary navigation sequences (available under NDA)
         self.action.move_by_offset(random.randint(-50, 50), random.randint(-50, 50)).perform()
         time.sleep(random.uniform(1, 3))  # Pause for 'reading'

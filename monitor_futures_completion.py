@@ -13,9 +13,9 @@ def monitor_futures_completion(obj=None, futures_attr=None, f_lock_attr="f_lock"
     stable completion states, enhancing reliability in distributed scraping environments.
 
     Impact:
-    - Prevented thread leaks and timeouts in scraping operations processing 1k+ concurrent requests, improving scalability by 40%.
-    - Integrated with concurrent.futures for evasion techniques, allowing seamless handling of rate-limited or anti-bot sites.
-    - Reduced detection risks by mimicking controlled, non-aggressive task pacing in multi-threaded scrapers.
+    - Prevented thread leaks and timeouts in scraping operations processing 50+ concurrent requests, allowing for thread operations while executing.
+    - Integrated with concurrent.futures for improved evasion techniques, allowing seamless handling of rate-limited or anti-bot sites.
+    - Reduced detection risks by mimicking controlled, non-aggressive task pacing in multi-threaded scrapers, while not losing efficiency to waiting for data updates.
 
     Args:
         obj: Optional object holding futures and lock attributes.
@@ -86,7 +86,7 @@ def monitor_futures_completion(obj=None, futures_attr=None, f_lock_attr="f_lock"
                 input("Press Enter to continue...")
                 col = int(input("Enter the col number: "))
                 value = input("Enter the value: ")
-                obj.update_control_panel_function(col, value)
+                obj.update_control_panel_function(col, value)  # (debugging) gets the explicit error message in the console
                 input("Press Enter to continue...")
             except:
                 pass

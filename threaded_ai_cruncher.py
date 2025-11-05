@@ -46,8 +46,7 @@ class AICruncher:
                     "headline": cont_data['headline'][i],
                     # ... additional fields
                 }
-                summary_future = ai.thread("generate_summary", prospect_info)  # Threaded AI call
-                summary = summary_future.result()
+                summary = ai.generate_summary(prospect_info)
                 self.gspread_mgr.thread("update_cont_value", list_id, cont_id, 'summary', summary)  # Threaded update
 
             # Redacted: ICP fit analysis and culling logic
@@ -60,8 +59,7 @@ class AICruncher:
 
             # Handle initial request message generation if missing
             if not cont_data['queued_req'][i]:
-                req_future = ai.thread("generate_req", cont_data['summary'][i], core_strat)  # Threaded AI generation
-                req_output = req_future.result()
+                req_output = ai.generate_req(cont_data['summary'][i], core_strat)
                 # Redacted: Update range with evolved message versions (raw, voiced, humanized)
                 self.gspread_mgr.update_cont_range(list_id, cont_id, 'raw_req', 'req_approval', req_output['evo'])
 
@@ -70,16 +68,14 @@ class AICruncher:
             if convo_log:
                 convo = json.loads(convo_log)
                 # Redacted: Summarize conversation and determine checkpoint
-                checkpoint_future = ai.thread("analyze_checkpoint", convo)
-                checkpoint = checkpoint_future.result()
+                checkpoint = ai.analyze_checkpoint(convo)
                 self.gspread_mgr.thread("update_cont_value", list_id, cont_id, 'checkpoint', checkpoint)
 
                 # Redacted: Decide on message vs. follow-up based on last sender and timing
                 # Includes delay calculations and apology insertions
 
                 # Example: Generate message
-                msg_future = ai.thread("generate_msg", checkpoint, cont_data['summary'][i], core_strat)
-                msg_output = msg_future.result()
+                msg_output = ai.generate_msg(checkpoint, cont_data['summary'][i], core_strat)
                 self.gspread_mgr.update_cont_range(list_id, cont_id, 'raw_msg', 'msg_approval', msg_output['evo'])
 
             # Redacted: Follow-up generation and disengagement tracking

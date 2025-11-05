@@ -25,31 +25,31 @@ Resume: [Ryan's Resume](https://drive.google.com/file/d/1eWeQfYQYL2q69_kr2A92uzQ
 - **Description**: Threaded analyzer for LinkedIn prospects and conversations, deciding AI methods and strategies with concurrent processing.
 - **Tech Stack**: Python, concurrent.futures (ThreadPoolExecutor), gspread_mgr for Sheets integration, random for weighted selections.
 - **Impact**: Processed 1K+ prospects/month, deciding AI prompts based on strategies.
-- **Code Snippet**: See [/threaded-processor/threaded_ai_cruncher.py](/threaded-processor/threaded_ai_cruncher.py).
+- **Code Snippet**: See [/threaded_ai_cruncher.py](/threaded_ai_cruncher.py).
 
 ### 3. GSpread Manager with Exponential Backoff (gspread_mgr.py)
 - **Description**: Custom wrappers for gspread with threaded calls, exponential backoff, and thread-safety for rate-limited scenarios.
 - **Tech Stack**: Python, gspread, concurrent.futures, threading (Locks), urllib3/requests for error handling.
 - **Impact**: Handled API rate limits for 45 clients' data syncing.
-- **Code Snippet**: See [/gspread-manager/gspread_mgr.py](/gspread-manager/gspread_mgr.py).
+- **Code Snippet**: See [/gspread_mgr.py](/gspread_mgr.py).
 
 ### 4. Futures Monitoring Utility (monitor_futures_completion.py)
 - **Description**: Monitors concurrent futures completion with timeout, stability window, and debug logging for thread-safe scraping pipelines.
 - **Tech Stack**: Python, collections (deque), time for rolling windows.
 - **Impact**: Prevented thread leaks in operations processing 50+ concurrent requests.
-- **Code Snippet**: See [/utils/monitor_futures_completion.py](/utils/monitor_futures_completion.py).
+- **Code Snippet**: See [/monitor_futures_completion.py](/monitor_futures_completion.py).
 
 ### 5. Gmail-to-Notion Integrator (email_to_notion_integrator.py)
 - **Description**: Automated pipeline to query Gmail, filter emails, parse content, and ingest into Notion databases.
 - **Tech Stack**: Python, googleapiclient (Gmail API), notion_client, datetime for timestamp handling.
 - **Impact**: Bridged unstructured emails to structured databases for operational intelligence.
-- **Code Snippet**: See [/gmail-to-notion/email_to_notion_integrator.py](/gmail-to-notion/email_to_notion_integrator.py).
+- **Code Snippet**: See [/email_to_notion_integrator.py](/email_to_notion_integrator.py).
 
 ### 6. Homebase Orchestrator (homebase_orchestrator.py)
 - **Description**: Bidirectional sync framework for task dashboards using AWS Lambda, with prioritization, modes, and backoff.
 - **Tech Stack**: Python, boto3 (S3, SecretsManager), gspread for Sheets, logging for orchestration.
 - **Impact**: Ensured real-time alignment across distributed dashboards for sales ops.
-- **Code Snippet**: See [/homebase/homebase_orchestrator.py](/homebase/homebase_orchestrator.py).
+- **Code Snippet**: See [/homebase_orchestrator.py](/homebase_orchestrator.py).
 
 ## How to Explore
 - Clone this repo: `git clone https://github.com/ryanmillerhq/ryanmillerhq-portfolio.git`

@@ -88,3 +88,99 @@ if __name__ == "__main__":
     sim.scroll_humanly(distance=200)
     sim.navigate_randomly()
     driver.quit()
+
+# Human Behavior Demo Method
+# The following code was used to execute the demo in this screen recording: https://youtu.be/hEM3Gfyi9Vo
+    # def portfolio_demo(self):
+    #     iframe = self.wait_to_find_elem("//iframe[@id='iframeResult']")
+    #     self.driver.switch_to.frame(iframe)
+    #     self.cursor.insert_canvas()
+
+    #     logging.debug("Starting cursor idling for natural behavior simulation.")
+    #     self.cursor.start_idling()
+    #     logging.debug("Pausing for a human-like delay around 3 seconds to mimic reading or thinking.")
+    #     self.dreamer.sleep(3)
+    #     logging.debug("Canceling cursor idling to proceed with actions.")
+    #     self.cursor.cancel_idling()
+
+    #     text_box = self.wait_to_find_elem("//input[@id='message-input']")
+    #     logging.debug("Moving cursor to the text box with passive idling mode turned off.")
+    #     self.cursor.to_elem('aa', text_box, mode=None)
+
+    #     text = "Hello, World!"
+    #     logging.debug(f"Simulating typing: '{text}'.")
+    #     simulate_typing(self, text)
+
+    #     send_button = self.wait_to_find_elem("//button[contains(normalize-space(), 'Send')]")
+    #     logging.debug("Moving cursor to the send button.")
+    #     self.cursor.to_elem('ab', send_button)
+
+    #     logging.debug("Moving cursor back to the text box with passive idling mode turned off.")
+    #     self.cursor.to_elem('aa', text_box, mode=None)
+
+    #     text = "This is to demonstrate the humanlike behavior of the program. 🧐"
+    #     logging.debug(f"Simulating typing: '{text}'.")
+    #     simulate_typing(self, text)
+
+    #     logging.debug("Moving cursor to the send button.")
+    #     self.cursor.to_elem('ab', send_button)
+
+    #     self.cursor.move_off_screen("right")
+    #     self.driver.switch_to.default_content()
+    #     self.cursor.insert_canvas()
+
+    #     theme_btn = self.wait_to_find_elem("//a[@title='Change Theme']")
+    #     logging.debug("Moving cursor to the theme button.")
+    #     self.cursor.to_elem('ac', theme_btn)
+
+    #     self.cursor.move_off_screen("right")
+    #     self.driver.switch_to.frame(iframe)
+    #     self.cursor.insert_canvas()
+
+    #     logging.debug("Moving cursor to the text box with passive idling mode turned off.")
+    #     self.cursor.to_elem('aa', text_box, mode=None)
+
+    #     text = "Mwahaha I changed the theme 😈"
+    #     logging.debug(f"Simulating typing: '{text}'.")
+    #     simulate_typing(self, text)
+    #     self.dreamer.sleep(0.5)
+    #     text = " now, for my next trick......."
+    #     logging.debug(f"Simulating typing: '{text}'.")
+    #     simulate_typing(self, text)
+
+    #     logging.debug("Moving cursor to the send button.")
+    #     self.cursor.to_elem('ab', send_button)
+
+    #     logging.debug("Pausing for a human-like delay around 2 seconds to simulate natural delay.")
+    #     self.dreamer.sleep(2)
+
+    #     self.cursor.move_off_screen("right")
+    #     self.driver.switch_to.default_content()
+    #     self.cursor.insert_canvas()
+
+    #     orientation_btn = self.wait_to_find_elem("//a[@title='Change Orientation']")
+    #     logging.debug("Moving cursor to the orientation button.")
+    #     self.cursor.to_elem('ae', orientation_btn)
+
+    #     self.cursor.move_off_screen("right")
+    #     self.driver.switch_to.frame(iframe)
+    #     self.cursor.insert_canvas()
+
+    #     results_box = self.wait_to_find_elem("//html")
+    #     logging.debug("Moving cursor to the results box with passive idling mode turned off.")
+    #     self.cursor.to_elem('ag', results_box, click=False, mode=None)
+
+    #     logging.debug("Scrolling to the send button element.")
+    #     self.cursor.scroll_to_elem('aa', send_button)
+
+    #     logging.debug("Moving cursor to the text box with passive idling mode turned off.")
+    #     self.cursor.to_elem('ah', text_box, mode=None)
+
+    #     text = "Impressed? ;)"
+    #     logging.debug(f"Simulating typing: '{text}'.")
+    #     simulate_typing(self, text)
+
+    #     logging.debug("Moving cursor to the send button.")
+    #     self.cursor.to_elem('ai', send_button)
+
+    #     self.cursor.scroll_to_top()

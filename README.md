@@ -18,8 +18,8 @@ Resume: [Ryan's Resume](https://drive.google.com/file/d/1eWeQfYQYL2q69_kr2A92uzQ
 - **Description**: Integrated simulator for cursor movements, typing errors, breaks, and navigation to make web automation undetectable. Combines elements from cursor_sim.py, sleep_sim.py, typing_sim.py, and human_behavior.py.
 - **Tech Stack**: Python, Selenium (ActionChains, Keys), random/time for variability.
 - **Impact**: Enabled 100s of hours of LinkedIn automation in 2024 and 2025 without bans; handled 50+ requests and 100s of conversations daily with 40-60% acceptance rates.
-- **Code Snippet**: See [/human-like-evasion/human_simulator.py](/human-like-evasion/human_simulator.py) (redacted version; full evasion available post-NDA).
-- **Demo**: [Loom screen recording of simulator in action](https://www.loom.com/share/your-video-id) (ethical public data demo).
+- **Code Snippet**: See [/human_simulator.py](/human_simulator.py) (redacted version; full evasion available post-NDA).
+- **Demo**: [Screen recording of simulator in action](https://youtu.be/hEM3Gfyi9Vo) (ethical public html demo).
 
 ### 2. Threaded Database Processor (threaded_ai_cruncher.py)
 - **Description**: Threaded analyzer for LinkedIn prospects and conversations, deciding AI methods and strategies with concurrent processing.
